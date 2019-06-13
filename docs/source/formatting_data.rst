@@ -26,7 +26,7 @@ NOTE: We assume each column is a numerical column, unless you specify otherwise 
 #. ``attribute_name: 'categorical'`` All attribute names that hold a string in any of the rows after the header row will be encoded as categorical data. If, however, you have any numerical columns that you want encoded as categorical data, you can specify that here.
 #. ``attribute_name: 'nlp'`` If any of your data is a text field that you'd like to run some Natural Language Processing on, specify that in the header row. Data stored in this attribute will be encoded using TF-IDF, along with some other feature engineering (count of some aggregations like total capital letters, puncutation characters, smiley faces, etc., as well as a sentiment prediction of that text).
 #. ``attribute_name: 'ignore'`` This column of data will be ignored.
-#. ``attribute_name: 'date'`` Since ML algorithms don't know how to handle a Python datetime object, we will perform feature engineering on this object, creating new features like day_of_week, or minutes_into_day, etc. Then the original date field will be removed from the training data so the algorithsm don't throw a TypeError.
+#. ``attribute_name: 'date'`` Since ML algorithms don't know how to handle a Python datetime object, we will perform feature engineering on this object, creating new features like day_of_week, or minutes_into_day, etc. Then the original date field will be removed from the training data so the algorithms don't throw a TypeError.
 
 
 Passing in your own feature engineering function
